@@ -58,7 +58,7 @@ def create_features(df: pd.DataFrame) -> pd.DataFrame:
 
     # TODO
     bins=pd.IntervalIndex.from_tuples([(-1,5), (5,10), (10,15), (15,100)])
-    cat_YearsAtCompany=pd.cut(df["YearsAtCompany".to_list(),bins])
+    cat_YearsAtCompany=pd.cut(df["YearsAtCompany"].to_list(),bins)
     cat_YearsAtCompany.categories=[0,1,2,3]
     df["YearsAtCompanyCat"]=cat_YearsAtCompany
 
